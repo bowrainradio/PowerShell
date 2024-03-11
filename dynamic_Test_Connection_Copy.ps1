@@ -32,14 +32,15 @@ function CopyFiles {
               Write-Host $computer
             if (Test-Connection -TargetName $computer -Quiet) {
                 CopyFiles
-                Write-Host "Copy operation successful."
+                Write-Host "Copy successful."
                 $sources.Remove($computer)
                 Write-Host $sources.Count
                 if($sources.Count -eq 0){
+                    Write-Host "Copy from each source finished successfully."
                     return $success = $true
                 }
             }else {
-                Write-Host "Copy operation failed"
+                Write-Host "Copy failed"
             }
        }
     } while ($attempts -lt $maxAttempts) #3 attemps, with -lt operator (Less Than)
