@@ -19,6 +19,6 @@ function decryptString{
 }
 
 
-encryptString "your_Mama@!#" "C:\Users\phtec\Documents\temp" "password" #you can use it one time to encrypt whatever string/password/token you want and after that remove this function call since it will be already encrypted on you drive in txt file
-$password = decryptString "C:\Users\phtec\Documents\temp\password.txt" #I use it inside my api call function so it's harded to find and only converts the secure string when i make an api call and after that this variable no longer exist so you can't read it. Of course it doesn't stop you to call this function outside when you know the txt file path but it's better then nothing :)
+encryptString "your_Mama@!#" "C:\Filip\Documents\TopSecret" "password" #you can use it one time to encrypt whatever string/password/token you want and after that remove this function call since it will be already encrypted on you drive in txt file
+$password = decryptString "C:\Filip\Documents\TopSecret\password.txt" #I use it inside my api call function so it's harded to find and only converts the secure string when i make an api call and after that this variable no longer exist so you can't read it. Of course it doesn't stop you to call this function outside when you know the txt file path but it's better then nothing :)
 Write-Output $password
